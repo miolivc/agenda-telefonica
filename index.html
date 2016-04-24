@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Agenda Telefônica</title>
+        <meta charset="utf-8">
+        <meta name=''viewport'' content=''width=device-width,   inital-scale=1.0''>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.indigo-pink.min.css">
+        <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+        <link rel="stylesheet" type="text/css"  href="css/style.css">
+    </head>
+
+    <body>
+        <header>
+            <h1>Agenda Telefônica</h1>
+        </header>
+
+        <section>
+
+            <div>
+                  <button id="show-dialog" type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Adicionar</button>
+            </div>
+
+            <dialog class="mdl-dialog">
+                <h4 class="mdl-dialog__title2">Agenda Telefônica</h4>
+                <div class="mdl-dialog__content">
+                    <form action="#">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                             <input class="mdl-textfield__input" type="text" id="#nome" required>
+                             <label class="mdl-textfield__label" for="#nome">Nome</label>
+                        </div>
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                             <input class="mdl-textfield__input" type="date"  id="#data"  required>
+                             <label class="mdl-textfield__label" for="#data">Data de Nascimento</label>
+                        </div>
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="tel"  id="#telefone" required>
+                             <label class="mdl-textfield__label" for="#telefone">Telefone</label>
+                        </div>
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="email"  id="#email"  required>
+                             <label class="mdl-textfield__label" for="#email">E-mail</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="mdl-dialog__actions">
+                      <button type="submit" id="adicionar" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Adicionar</button>
+                      <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored close">Fechar</button>
+                </div>
+            </dialog>
+
+
+            <table id="lista" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Data de Nascimento</th>
+                        <th>Telefone</th>
+                        <th>E-mail</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Michelle Oliveira</td>
+                        <td>12/09/1996</td>
+                        <td>+5583998501278</td>
+                        <td>miolivc@outlook.com</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <footer>
+            <p>&copy; Copyright, 2016 - Todos os direitos reservados à Michelle Oliveira</p>
+        </footer>
+
+        <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+</html>
