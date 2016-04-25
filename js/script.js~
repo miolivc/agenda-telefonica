@@ -19,12 +19,11 @@ dialog.querySelector('.close').addEventListener('click', function() {
 // Adicionar
 
 $("#adicionar").click(function adicionar(){
-    var nome = $("#nome").val();
-    var data = $("#data").val();
-    var telefone = $("#telefone").val();
-    var email = $("#email").val();
 
-    $("tbody").append("<tr><td>" + nome + "</td><td>"+ data + "</td><td>" + telefone +  "</td><td>"+ email +"</td></tr>");
+    var nome =  $("#nome").val();
+
+    $("tbody").append("<tr><td>" + nome   //$("#nome").val()
+    + "</td><td>"+ $("#data").val() + "</td><td>" + $("#telefone").val() +  "</td><td>"+ $("#email").val() +"</td></tr>");
 
 });
 

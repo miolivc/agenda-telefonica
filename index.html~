@@ -24,21 +24,21 @@
             <dialog class="mdl-dialog">
                 <h4 class="mdl-dialog__title2">Agenda Telefônica</h4>
                 <div class="mdl-dialog__content">
-                    <form action="index.html">
+                    <form action="#">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                             <input class="mdl-textfield__input" type="text" id="nome" required>
+                             <input class="mdl-textfield__input" type="text" id="#nome" required>
                              <label class="mdl-textfield__label" for="#nome">Nome</label>
                         </div>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                             <input class="mdl-textfield__input" type="date"  id="data"  required>
+                             <input class="mdl-textfield__input" type="date"  id="#data"  required>
                              <label class="mdl-textfield__label" for="#data">Data de Nascimento</label>
                         </div>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="tel"  id="telefone" required>
+                            <input class="mdl-textfield__input" type="tel"  id="#telefone" required>
                              <label class="mdl-textfield__label" for="#telefone">Telefone</label>
                         </div>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="email"  id="email"  required>
+                            <input class="mdl-textfield__input" type="email"  id="#email"  required>
                              <label class="mdl-textfield__label" for="#email">E-mail</label>
                         </div>
                     </form>
@@ -62,7 +62,7 @@
                 <tbody>
                     <tr>
                         <td>Michelle Oliveira</td>
-                        <td>1996-09-12</td>
+                        <td>12/09/1996</td>
                         <td>+5583998501278</td>
                         <td>miolivc@outlook.com</td>
                     </tr>
