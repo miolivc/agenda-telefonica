@@ -1,4 +1,3 @@
-
 //  Modal
 
 var dialog = document.querySelector('dialog');
@@ -28,14 +27,10 @@ $("#adicionar").click(function adicionar(){
     var telefone = $("#telefone").val();
     var email = $("#email").val();
 
-    var row = $.parseHTML("<tr onclick ='clicou(this)' ><td>" + nome + "</td><td>"+ data + "</td><td>" + telefone +  "</td><td>"+ email +"</td></tr>"); 
+    var row = "<tr onclick ='clicou(this)' ><td>" + nome + "</td><td>"+ data + "</td><td>" + telefone +  "</td><td>"+ email +"</td></tr>"; 
     
-    console.log("aqui foi");
-    
-    if(!search(row)){
-        $("tbody").append(row);
-        dialog.close();
-    }
+    $("tbody").append(row);
+    dialog.close();
     
     
 /*
@@ -71,39 +66,24 @@ function clicou(tr){
         $('#data').val(element[1].innerText);
         $('#telefone').val(element[2].innerText);
         $('#email').val(element[3].innerText);    
- 
- /*
-        var tabela = document.getElementById("lista");
-        var linhas = tabela.getElementsByTagName("tr");
+        
+        dialog.showModal();
+        edit = false;        
 
-        for (var i = 0; i < linhas.length; i++) { 
-            if(row == linhas[i]){
-                alert("Nada foi modificado!");
-            }
-        }
- */
-        dialog.showModal();        
-        edit = false;
-    }
-};
+        var nome = $("#nome").val();
+        var data = $("#data").val();
+        var telefone = $("#telefone").val();
+        var email = $("#email").val();
 
-function search(tr){
-    var row = tr;
-    var tabela = document.getElementById("lista");
-    var linhas = tabela.getElementsByTagName("tr");    
-    
-    if(linhas.length == 0){
-        return false;
-    }
+        var newRow = "<tr onclick ='clicou(this)' ><td>" + nome + "</td><td>"+ data + "</td><td>" + telefone + "</td><td>"+ email +"</td></tr>";
 
-    for (var i = 0; i < linhas.length; i++) { 
-        alert(row);
-        alert(linhas[i]);
-        if(row === linhas[i]){
-            return true;
+        if(newRow == row){
+            dialog.close();
+            alert("Esse cadastro já existe na tabela!");
+        } else {
+            $("tbody").append(newRow);
+            row.remove();
         }
     }
-    return false;
 };
-
 
