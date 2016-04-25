@@ -7,7 +7,7 @@ html, body{
 header, footer{
     color: white;
     padding: 1%;
-    background-color: #3F51B5; 
+    background-color: #3F51B5;
 }
 
 header{
@@ -23,12 +23,4 @@ h1{
 
 footer{
     margin-top: 2%;
-}
-
-table {
-    width: 80%;
-    margin: auto;
-    margin-top: 2%;
-    margin-bottom: 2%; 
-    background-color: 
 }

@@ -19,11 +19,29 @@ dialog.querySelector('.close').addEventListener('click', function() {
 // Adicionar
 
 $("#adicionar").click(function adicionar(){
+    var nome = $("#nome").val();
+    var data = $("#data").val();
+    var telefone = $("#telefone").val();
+    var email = $("#email").val();
 
-    var nome =  $("#nome").val();
-
-    $("tbody").append("<tr><td>" + nome   //$("#nome").val()
-    + "</td><td>"+ $("#data").val() + "</td><td>" + $("#telefone").val() +  "</td><td>"+ $("#email").val() +"</td></tr>");
-
+    $("tbody").append("<tr onclick ='clicou(this)' ><td>" + nome + "</td><td>"+ data + "</td><td>" + telefone +  "</td><td>"+ email +"</td></tr>");
+    
+    dialog.close();
 });
+
+$('#remover').click();
+
+/*
+var descendentes = document.querySelectorAll("tbody");
+
+for (var i = 0; i < descendentes.length; i++) {
+    descendentes[i].addEventListener("click", function (e) {
+        alert('O elemento clicado foi o ' + this.innerHTML);
+    });
+};
+
+*/
+function clicou(tr){
+    tr.remove();
+};
 
